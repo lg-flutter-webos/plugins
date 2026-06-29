@@ -1,0 +1,21 @@
+name: device_info_plus_webos_example
+description: Demonstrates how to use the device_info_plus plugin.
+publish_to: 'none'
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  device_info_plus: ^11.1.0
+  device_info_plus_webos:
+    path: ../
+
+  cupertino_icons: ^1.0.2
+
+dev_dependencies:
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true

@@ -1,0 +1,23 @@
+name: gamepads_webos_example
+description: A simple example project showcasing the gamepads plugin.
+publish_to: 'none'
+
+version: 0.1.0
+
+environment:
+  sdk: '>=2.19.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  gamepads: ^0.1.2
+  gamepads_webos:
+    path: ../
+
+dev_dependencies:
+  flutter_lints: ^5.0.0
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true

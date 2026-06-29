@@ -1,0 +1,24 @@
+{
+    "id": "com.flutter.app.webos-app-manager-example",
+    "version": "1.0.0",
+    "vendor": "LG Electronics",
+    "type": "native",
+    "main": "webos_app_manager_example",
+    "title": "Flutter webos_app_manager_example app",
+    "icon": "icon.png",
+    "iconColor": "#ffffff",
+    "largeIcon": "icon.png",
+    "handlesRelaunch": true,
+    "visible": true,
+    "defaultWindowType": "card",
+    "trustLevel": "default",
+    "locationHint":"none",
+    "noSplashOnLaunch":true,
+    "spinnerOnLaunch": false,
+    "transparent":false,
+    "uiRevision":2,
+    "requiredACG": [
+        "application.launcher",
+	    "application.query"
+    ]
+}

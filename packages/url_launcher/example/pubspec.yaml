@@ -1,0 +1,19 @@
+name: url_launcher_webos_example
+description: Demonstrates the WebOS implementation of the url_launcher plugin.
+publish_to: 'none'
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  url_launcher: ^6.3.1
+  url_launcher_webos:
+    path: ../
+
+dev_dependencies:
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true

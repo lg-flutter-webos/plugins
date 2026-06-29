@@ -1,0 +1,24 @@
+name: shared_preferences_webos
+description: webOS implementation of the shared_preferences plugin
+version: 1.0.0
+
+flutter:
+  plugin:
+    platforms:
+      webos:
+        dartPluginClass: SharedPreferencesWebos
+        pluginClass: SharedPreferencesWebosPlugin
+
+dependencies:
+  flutter:
+    sdk: flutter
+  shared_preferences_platform_interface: ^2.4.0
+
+dev_dependencies:
+  flutter_lints: ^5.0.0
+  flutter_test:
+    sdk: flutter
+
+environment:
+  sdk: '>=3.4.0 <4.0.0'
+  flutter: '>=3.22.0'

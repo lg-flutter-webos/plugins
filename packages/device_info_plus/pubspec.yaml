@@ -1,0 +1,23 @@
+name: device_info_plus_webos
+description: Flutter plugin providing detailed information about WebOS device
+version: 1.0.0
+
+environment:
+  sdk: '>=3.3.0 <4.0.0'
+  flutter: '>=3.3.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  device_info_plus_platform_interface: ^7.0.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  plugin:
+    platforms:
+      webos:
+        dartPluginClass: DeviceInfoWebOSPlugin

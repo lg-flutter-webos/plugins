@@ -1,0 +1,27 @@
+name: path_provider_example
+description: Demonstrates how to use the path_provider plugin.
+publish_to: none
+
+environment:
+  sdk: '>=3.0.5 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  path_provider: ^2.1.1
+  path_provider_webos:
+    path: ../
+  path_provider_platform_interface: ^2.1.1
+
+dev_dependencies:
+  flutter_lints: ^5.0.0
+  build_runner: ^2.1.10
+  flutter_driver:
+    sdk: flutter
+  flutter_test:
+    sdk: flutter
+  integration_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true

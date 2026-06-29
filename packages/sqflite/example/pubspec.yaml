@@ -1,0 +1,28 @@
+name: sqflite_webos_example
+description: Demonstrates how to use the sqflite_webos plugin.
+publish_to: "none"
+
+environment:
+  sdk: ">=3.1.0 <4.0.0"
+  flutter: ">=3.13.0"
+
+dependencies:
+  path: any
+  collection: any
+  flutter:
+    sdk: flutter
+  sqflite: ^2.4.0
+  sqflite_webos:
+    path: ../
+  synchronized:
+  matcher:
+  meta:
+
+dev_dependencies:
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/example.db
+    - assets/issue_64.db

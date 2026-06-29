@@ -1,0 +1,22 @@
+name: gamepads_webos
+description: webOS implementation of the gamepads plugin
+version: 1.0.0
+
+flutter:
+  plugin:
+    platforms:
+      webos:
+        pluginClass: GamepadsWebosPlugin
+
+environment:
+  sdk: '>=2.19.0 <4.0.0'
+  flutter: '>=3.3.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_lints: ^5.0.0
+  flutter_test:
+    sdk: flutter

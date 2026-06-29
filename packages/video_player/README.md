@@ -1,0 +1,62 @@
+# video_player_webos
+
+The WebOS implementation of [`video_player`](https://pub.dev/packages/video_player).
+
+## Supported platforms
+
+This plugin is supported on webOS 26 media or above.
+
+## Usage
+
+This package is not an _endorsed_ implementation of `video_player`.
+Therefore, you have to include `video_player_webos` alongside `video_player`
+as dependencies in your `pubspec.yaml` file.
+
+**pubspec.yaml:**
+
+```yaml
+dependencies:
+  video_player: ^2.9.0
+  video_player_webos: ^1.0.0
+```
+
+**Import:**
+
+```dart
+import 'package:video_player/video_player.dart';
+```
+
+## Required configurations
+
+Video playback uses a transparent Flutter surface so the platform video plane
+can show through. Set `transparent: true` in your application's
+`appinfo.json`:
+
+```json
+{
+  "transparent": true
+}
+```
+
+## Example
+
+See the [example application](example/lib/main.dart) for a complete usage demonstration.
+
+## API Reference
+
+See the [API Reference](API_REFERENCE.md) for the list of supported APIs and webOS-specific behavior.
+
+## Limitations
+
+- Up to **5 video players** can run concurrently in a single application.
+  When the limit is reached, the next `VideoPlayerController` creation
+  automatically evicts the least-recently-created player; that player
+  receives an `error` event with code `-1` ("num of pipelines") so the
+  Dart side can detect the eviction.
+- `VideoPlayerController.setVolume` is not supported on webOS in this
+  release. Calling it surfaces a Dart exception with error code
+  `unsupported`. Apps that need per-stream volume control should rely
+  on system-wide volume controls.
+- The `httpHeaders` option of `VideoPlayerController.network` is not
+  supported.
+- `VideoPlayerOptions.mixWithOthers` is not supported.

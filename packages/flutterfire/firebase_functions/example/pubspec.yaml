@@ -1,0 +1,27 @@
+name: firebase_functions_webos_example
+description: Demonstrates how to use the firebase_functions_webos plugin.
+publish_to: 'none'
+
+environment:
+  sdk: ^3.6.1
+
+dependencies:
+  flutter:
+    sdk: flutter
+  firebase_core: ^3.0.0
+  firebase_core_webos:
+    path: ../../firebase_core/
+  cloud_functions: ^5.6.2
+  firebase_functions_webos:
+    path: ../
+  cupertino_icons: ^1.0.8
+
+dev_dependencies:
+  integration_test:
+    sdk: flutter
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true

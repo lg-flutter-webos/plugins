@@ -1,0 +1,19 @@
+name: flutter_secure_storage_webos_example
+description: Demonstrates how to use the flutter_secure_storage_webos plugin.
+publish_to: 'none'
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_secure_storage: ^9.2.2
+  flutter_secure_storage_webos:
+    path: ../
+
+dev_dependencies:
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true

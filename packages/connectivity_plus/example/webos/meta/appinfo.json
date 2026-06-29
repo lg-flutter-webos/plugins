@@ -1,0 +1,23 @@
+{
+    "id": "com.flutter.app.connectivity-plus-example",
+    "version": "1.0.0",
+    "vendor": "LG Electronics",
+    "type": "native",
+    "main": "connectivity_plus_example",
+    "title": "Flutter connectivity_plus_example app",
+    "icon": "icon.png",
+    "iconColor": "#ffffff",
+    "largeIcon": "icon.png",
+    "handlesRelaunch": true,
+    "visible": true,
+    "defaultWindowType": "card",
+    "trustLevel": "default",
+    "locationHint":"none",
+    "noSplashOnLaunch":true,
+    "spinnerOnLaunch": false,
+    "transparent":false,
+    "uiRevision": 2,
+    "requiredACG": [
+        "network.query"
+    ]
+}

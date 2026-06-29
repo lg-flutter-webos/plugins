@@ -1,0 +1,17 @@
+name: example
+description: A sample webos_lint application
+
+environment:
+  sdk: ^3.1.5
+
+# Add regular dependencies here.
+dependencies:
+  flutter:
+    sdk: flutter
+  # plover: (internal dependency removed)
+  # webos_i18n: (internal dependency removed)
+
+dev_dependencies:
+  custom_lint:
+  webos_lint:
+    path: ../../webos_lint

@@ -1,0 +1,25 @@
+{
+    "id": "com.flutter.app.webos-service-bridge-example",
+    "version": "1.0.0",
+    "vendor": "LG Electronics",
+    "type": "native",
+    "main": "webos_service_bridge_example",
+    "title": "Flutter webos_service_bridge_example app",
+    "icon": "icon.png",
+    "iconColor": "#ffffff",
+    "largeIcon": "icon.png",
+    "handlesRelaunch": true,
+    "visible": true,
+    "defaultWindowType": "card",
+    "trustLevel": "default",
+    "locationHint":"none",
+    "noSplashOnLaunch":true,
+    "spinnerOnLaunch": false,
+    "transparent":true,
+    "uiRevision":2,
+    "requiredACG": [
+        "time.query",
+        "audio.operation",
+        "network.query"
+    ]
+}

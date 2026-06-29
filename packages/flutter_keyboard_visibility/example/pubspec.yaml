@@ -1,0 +1,23 @@
+name: flutter_keyboard_visibility_example
+description: Demonstrates how to use the flutter_keyboard_visibility plugin.
+publish_to: 'none'
+
+environment:
+  sdk: '>=2.12.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_keyboard_visibility: ^6.0.0
+  flutter_keyboard_visibility_webos:
+    path: ../
+  flutter_keyboard_visibility_platform_interface: ^2.0.0
+  cupertino_icons: ^1.0.2
+
+dev_dependencies:
+  flutter_lints: ^5.0.0
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true

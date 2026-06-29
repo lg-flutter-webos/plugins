@@ -1,0 +1,8 @@
+{
+  "FLUTTER_HOME": "/media/developer/temp/apps/home",
+  "FLUTTER_TEMP_HOME": "/media/developer/temp/apps/home/.cache",
+  "FLUTTER_APPDATA_HOME": "/media/developer/temp/apps/home/.data",
+  "FLUTTER_DOWNLOAD_HOME": "/media/developer/temp/apps/home/.download",
+  "FLUTTER_EXT_STORAGE_PATH": "/media/internal",
+  "FLUTTER_APP_LOG_PATH": "/media/developer/temp/log"
+}

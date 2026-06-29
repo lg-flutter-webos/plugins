@@ -1,0 +1,34 @@
+name: audioplayers_webos_example
+description: Demonstrates how to use the audioplayers plugin.
+publish_to: "none"
+
+dependencies:
+  audioplayers: ^6.4.0
+  audioplayers_webos:
+    path: ../
+  collection: ^1.16.0
+  file_picker: ^8.0.3
+  flutter:
+    sdk: flutter
+  http: ^1.0.0
+  path_provider: ^2.0.12
+  path_provider_webos:
+    path: ../../path_provider/
+  provider: ^6.0.5
+
+dev_dependencies:
+  flutter_lints: ^5.0.0
+  flutter_driver:
+    sdk: flutter
+  flutter_test:
+    sdk: flutter
+  integration_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/
+
+environment:
+  sdk: ^3.10.9

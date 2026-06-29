@@ -1,0 +1,26 @@
+name: firebase_auth_webos
+description: webOS implementation of the firebase_auth plugin.
+version: 0.1.0
+
+environment:
+  sdk: ^3.6.1
+  flutter: '>=3.3.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  plugin_platform_interface: ^2.0.2
+  firebase_auth_platform_interface: ^7.7.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+  pigeon: ^17.0.0
+
+flutter:
+  plugin:
+    platforms:
+      webos:
+        dartPluginClass: FirebaseAuthWebos
+        pluginClass: FirebaseAuthWebosPlugin

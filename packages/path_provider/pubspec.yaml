@@ -1,0 +1,25 @@
+name: path_provider_webos
+description: webos implementation of the path_provider plugin
+version: 1.0.0
+
+environment:
+  sdk: '>=2.19.4 <4.0.0'
+  flutter: '>=2.11.0'
+
+flutter:
+  plugin:
+    implements: path_provider
+    platforms:
+      webos:
+        dartPluginClass: PathProviderWebOS
+
+dependencies:
+  flutter:
+    sdk: flutter
+  path: ^1.8.0
+  path_provider_platform_interface: ^2.0.0
+
+dev_dependencies:
+  flutter_lints: ^5.0.0
+  flutter_test:
+    sdk: flutter

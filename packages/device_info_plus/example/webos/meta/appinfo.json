@@ -1,0 +1,23 @@
+{
+    "id": "com.flutter.app.device-info-plus-webos-example",
+    "version": "1.0.0",
+    "vendor": "LG Electronics",
+    "type": "native",
+    "main": "device_info_plus_webos_example",
+    "title": "Flutter device_info_plus_webos_example app",
+    "icon": "icon.png",
+    "iconColor": "#ffffff",
+    "largeIcon": "icon.png",
+    "handlesRelaunch": true,
+    "visible": true,
+    "defaultWindowType": "card",
+    "trustLevel": "default",
+    "locationHint":"none",
+    "noSplashOnLaunch":true,
+    "spinnerOnLaunch": false,
+    "transparent":false,
+    "uiRevision":2,
+    "requiredACG": [
+        "systemconfig.query"
+    ]
+}
