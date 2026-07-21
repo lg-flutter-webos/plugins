@@ -12,7 +12,11 @@ This plugin is supported on webOS 26 media or above.
 
 ```yaml
 dependencies:
-  webos_display: ^1.0.0
+  webos_display:
+    git:
+      url: https://github.com/lg-flutter-webos/plugins.git
+      path: packages/webos_display
+      ref: main
 ```
 
 **Import:**

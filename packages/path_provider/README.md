@@ -16,7 +16,11 @@ Therefore, you have to include `path_provider_webos` alongside `path_provider` a
 ```yaml
 dependencies:
   path_provider: ^2.1.1
-  path_provider_webos: ^1.0.0
+  path_provider_webos:
+    git:
+      url: https://github.com/lg-flutter-webos/plugins.git
+      path: packages/path_provider
+      ref: main
 ```
 
 **Import:**

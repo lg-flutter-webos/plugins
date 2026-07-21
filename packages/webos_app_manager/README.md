@@ -12,7 +12,11 @@ This plugin is supported on webOS 26 media or above.
 
 ```yaml
 dependencies:
-  webos_app_manager: ^1.0.0
+  webos_app_manager:
+    git:
+      url: https://github.com/lg-flutter-webos/plugins.git
+      path: packages/webos_app_manager
+      ref: main
 ```
 
 **Import:**

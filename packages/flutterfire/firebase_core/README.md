@@ -15,7 +15,11 @@ Add both `firebase_core` and `firebase_core_webos` as dependencies in your `pubs
 ```yaml
 dependencies:
   firebase_core: ^3.0.0
-  firebase_core_webos: ^1.0.0
+  firebase_core_webos:
+    git:
+      url: https://github.com/lg-flutter-webos/plugins.git
+      path: packages/flutterfire/firebase_core
+      ref: main
 ```
 
 Then import the upstream package:

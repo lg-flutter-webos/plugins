@@ -12,7 +12,11 @@ This plugin is supported on webOS 26 media or above.
 
 ```yaml
 dependencies:
-  custom_mouse_cursor: ^1.0.0
+  custom_mouse_cursor:
+    git:
+      url: https://github.com/lg-flutter-webos/plugins.git
+      path: packages/custom_mouse_cursor
+      ref: main
 ```
 
 **Import:**

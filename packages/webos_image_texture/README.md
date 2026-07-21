@@ -12,7 +12,11 @@ This plugin is supported on webOS 26 media or above.
 
 ```yaml
 dependencies:
-  webos_image_texture: ^1.0.0
+  webos_image_texture:
+    git:
+      url: https://github.com/lg-flutter-webos/plugins.git
+      path: packages/webos_image_texture
+      ref: main
 ```
 
 **Import:**

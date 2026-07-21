@@ -16,7 +16,11 @@ Therefore, you have to include `connectivity_plus_webos` alongside `connectivity
 ```yaml
 dependencies:
   connectivity_plus: ^6.1.0
-  connectivity_plus_webos: ^1.0.0
+  connectivity_plus_webos:
+    git:
+      url: https://github.com/lg-flutter-webos/plugins.git
+      path: packages/connectivity_plus
+      ref: main
 ```
 
 **Import:**

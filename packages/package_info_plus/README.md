@@ -16,7 +16,11 @@ Therefore, you have to include `package_info_plus_webos` alongside `package_info
 ```yaml
 dependencies:
   package_info_plus: ^4.0.1
-  package_info_plus_webos: ^1.0.0
+  package_info_plus_webos:
+    git:
+      url: https://github.com/lg-flutter-webos/plugins.git
+      path: packages/package_info_plus
+      ref: main
 ```
 
 **Import:**

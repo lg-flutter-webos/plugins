@@ -16,7 +16,11 @@ Therefore, you have to include `gamepads_webos` alongside `gamepads` as dependen
 ```yaml
 dependencies:
   gamepads: ^0.1.2
-  gamepads_webos: ^1.0.0
+  gamepads_webos:
+    git:
+      url: https://github.com/lg-flutter-webos/plugins.git
+      path: packages/gamepads
+      ref: main
 ```
 
 **Import:**

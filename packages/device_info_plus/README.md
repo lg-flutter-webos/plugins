@@ -16,7 +16,11 @@ Therefore, you have to include `device_info_plus_webos` alongside `device_info_p
 ```yaml
 dependencies:
   device_info_plus: ^11.1.0
-  device_info_plus_webos: ^1.0.0
+  device_info_plus_webos:
+    git:
+      url: https://github.com/lg-flutter-webos/plugins.git
+      path: packages/device_info_plus
+      ref: main
 ```
 
 **Import:**

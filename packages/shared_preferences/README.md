@@ -16,7 +16,11 @@ Therefore, you have to include `shared_preferences_webos` alongside `shared_pref
 ```yaml
 dependencies:
   shared_preferences: ^2.3.2
-  shared_preferences_webos: ^1.0.0
+  shared_preferences_webos:
+    git:
+      url: https://github.com/lg-flutter-webos/plugins.git
+      path: packages/shared_preferences
+      ref: main
 ```
 
 **Import:**
