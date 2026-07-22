@@ -16,7 +16,11 @@ Therefore, you have to include `sqflite_webos` alongside `sqflite` as dependenci
 ```yaml
 dependencies:
   sqflite: ^2.4.0
-  sqflite_webos: ^1.0.0
+  sqflite_webos:
+    git:
+      url: https://github.com/lg-flutter-webos/plugins.git
+      path: packages/sqflite
+      ref: main
 ```
 
 **Import:**

@@ -16,7 +16,11 @@ Therefore, you have to include `flutter_secure_storage_webos` alongside `flutter
 ```yaml
 dependencies:
   flutter_secure_storage: ^9.2.3
-  flutter_secure_storage_webos: ^1.0.0
+  flutter_secure_storage_webos:
+    git:
+      url: https://github.com/lg-flutter-webos/plugins.git
+      path: packages/flutter_secure_storage
+      ref: main
 ```
 
 **Import:**

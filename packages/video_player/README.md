@@ -17,7 +17,11 @@ as dependencies in your `pubspec.yaml` file.
 ```yaml
 dependencies:
   video_player: ^2.9.0
-  video_player_webos: ^1.0.0
+  video_player_webos:
+    git:
+      url: https://github.com/lg-flutter-webos/plugins.git
+      path: packages/video_player
+      ref: main
 ```
 
 **Import:**

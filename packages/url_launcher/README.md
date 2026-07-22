@@ -16,7 +16,11 @@ Therefore, you have to include `url_launcher_webos` alongside `url_launcher` as 
 ```yaml
 dependencies:
   url_launcher: ^6.3.1
-  url_launcher_webos: ^1.0.0
+  url_launcher_webos:
+    git:
+      url: https://github.com/lg-flutter-webos/plugins.git
+      path: packages/url_launcher
+      ref: main
 ```
 
 **Import:**

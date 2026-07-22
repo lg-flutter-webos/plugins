@@ -12,7 +12,11 @@ This plugin is supported on webOS 26 media or above.
 
 ```yaml
 dependencies:
-  webos_service_bridge: ^1.0.0
+  webos_service_bridge:
+    git:
+      url: https://github.com/lg-flutter-webos/plugins.git
+      path: packages/webos_service_bridge
+      ref: main
 ```
 
 **Import:**

@@ -16,7 +16,11 @@ Therefore, you have to include `flutter_keyboard_visibility_webos` alongside `fl
 ```yaml
 dependencies:
   flutter_keyboard_visibility: ^6.0.0
-  flutter_keyboard_visibility_webos: ^1.0.0
+  flutter_keyboard_visibility_webos:
+    git:
+      url: https://github.com/lg-flutter-webos/plugins.git
+      path: packages/flutter_keyboard_visibility
+      ref: main
 ```
 
 **Import:**

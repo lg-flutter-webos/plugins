@@ -17,7 +17,11 @@ as dependencies in your `pubspec.yaml` file.
 ```yaml
 dependencies:
   audioplayers: ^6.4.0
-  audioplayers_webos: ^1.0.0
+  audioplayers_webos:
+    git:
+      url: https://github.com/lg-flutter-webos/plugins.git
+      path: packages/audioplayers
+      ref: main
 ```
 
 **Import:**

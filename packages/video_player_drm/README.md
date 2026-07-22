@@ -12,7 +12,11 @@ This plugin is supported on webOS 26 media or above.
 
 ```yaml
 dependencies:
-  video_player_drm: ^1.0.0
+  video_player_drm:
+    git:
+      url: https://github.com/lg-flutter-webos/plugins.git
+      path: packages/video_player_drm
+      ref: main
 ```
 
 **Import:**
