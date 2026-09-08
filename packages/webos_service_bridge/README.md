@@ -68,7 +68,7 @@ Add the Luna ACGs required by the services you intend to call to your `appinfo.j
 ```
 
 > The required ACG values depend on which Luna service URIs your app calls.
-> Refer to the webOS Luna service documentation for the ACG of each service.
+> Refer to the [ACG Guide](https://dv.webostv.developer.lge.com/develop/guides/acg-guide) for the ACG of each Luna service.
 
 ## Example
 
