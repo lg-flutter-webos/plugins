@@ -82,7 +82,6 @@ class AudioPlayer {
   std::string pending_error_text_;
 
   bool is_initialized_ = false;
-  int64_t seek_position_ = 0;
   int64_t current_position_ = 0;
   int64_t duration_ = 0;
   double volume_ = 1.0;

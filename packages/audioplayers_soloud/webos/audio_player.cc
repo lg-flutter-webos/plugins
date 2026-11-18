@@ -329,17 +329,20 @@ void AudioPlayer::Seek(int64_t position) {
   // audioplayers' seek() waits for onSeekComplete, so send it on every path.
   if (uri_.empty()) {
     LogInfo(TAG) << "player_set_play_position: empty url";
-  } else if (position != getCurrentPosition()) {
-    seek_position_ = position;
-    if (handle_) {
-      player_.seek(handle_, position / 1000.);
-    }
+  } else if (position != getCurrentPosition() && handle_) {
+    // SoLoud seeks synchronously, so a playing voice reports the new
+    // position at once. Store it too for the paused case, where
+    // getCurrentPosition() returns the cached value.
+    player_.seek(handle_, position / 1000.);
+    current_position_ = position;
   }
   sink_seek_completed();
 }
 
 int64_t AudioPlayer::GetPosition() {
-  return std::max(seek_position_, getCurrentPosition());
+  // Not max(seek target, position): after a loop wraps, the position is
+  // below the last seek target again (plugins#1).
+  return getCurrentPosition();
 }
 
 int64_t AudioPlayer::getCurrentPosition() {
@@ -351,7 +354,6 @@ int64_t AudioPlayer::getCurrentPosition() {
 
 void AudioPlayer::Stop() {
   request_play_ = false;
-  seek_position_ = 0;
   current_position_ = 0;
 
   if (handle_) {
@@ -399,7 +401,6 @@ void AudioPlayer::Release() {
   pending_error_code_ = 0;
   pending_error_text_.clear();
   request_play_ = false;
-  seek_position_ = 0;
   current_position_ = 0;
 
   is_initialized_ = false;
