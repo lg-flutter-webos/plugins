@@ -97,6 +97,6 @@ void main() {
     MockImageTexturePlatform fakePlatform = MockImageTexturePlatform();
     ImageTexturePlatform.instance = fakePlatform;
 
-    expect(imageTexturePlugin.runtimeType, '$ImageTextureMethodChannel');
+    expect(imageTexturePlugin.runtimeType, ImageTextureMethodChannel);
   });
 }
