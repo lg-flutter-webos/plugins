@@ -382,6 +382,13 @@ std::optional<FlutterError> VideoPlayerPlugin::SetLooping(
 std::optional<FlutterError> VideoPlayerPlugin::SetVolume(
     const VolumeMessage &msg) {
   LogDebug(TAG) << "SetVolume(" << msg.texture_id() << "," << msg.volume() << ")";
+  // VideoPlayerController applies its default volume (1.0) during
+  // initialize() without awaiting the result, so an error here surfaced as an
+  // uncaught exception in every app. Full volume is what the platform plays
+  // at anyway; only report "unsupported" for a real change.
+  if (msg.volume() >= 1.0) {
+    return std::nullopt;
+  }
   return flutterErrorInternal(
       "unsupported",
       "Per-stream volume control is not supported on this platform.");
