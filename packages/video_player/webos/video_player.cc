@@ -299,6 +299,10 @@ void VideoPlayer::OnInitialized() {
 void VideoPlayer::OnPlayCompleted() {
   if (looping_) {
     if (!removed_ && !reload_ && looping_) {
+      // GetPosition() reports max(seek_position_, current position). Without
+      // this reset, a loop after an earlier seekTo() keeps reporting the old
+      // seek target until playback passes it again.
+      seek_position_ = 0;
       player_.seek(0,true);
       if (request_play_) {
         Play();
