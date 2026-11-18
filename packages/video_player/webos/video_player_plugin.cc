@@ -232,16 +232,20 @@ void VideoPlayerPlugin::handleAppLifecycle(const std::string& lifecycle) {
     }
     player->SetVisibility(visibility);
 
+    // Pause/resume the platform player here, but do not push
+    // isPlayingStateUpdate events for it. VideoPlayerController has its own
+    // lifecycle observer: if this event arrives first, the controller records
+    // "was not playing" on pause, never calls play() on resume, and its
+    // position timer stays stopped, so value.position freezes after the app
+    // returns from Home. The controller's pause()/play() keep it consistent.
     if (visibility) {
       if (forced_pauses_.find(textureId) != forced_pauses_.end()) {
         player->Play();
-        player->OnPlayingStateChanged(true);
         forced_pauses_.erase(textureId);
       }
     } else if (!background_run_) {
       if (player->IsPlaying()) {
         player->Pause();
-        player->OnPlayingStateChanged(false);
         forced_pauses_[textureId] = true;
       }
     }
