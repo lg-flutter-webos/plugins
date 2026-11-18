@@ -36,7 +36,12 @@ class WebOSServiceChannel extends LS2ServicePlatform {
     try {
       await methodChannel.invokeMethod<void>('cancel', null);
     } catch (exception) {
-      debugPrint((exception as PlatformException).message);
+      // Not every failure is a PlatformException (a channel without a
+      // 'cancel' handler throws MissingPluginException); casting made this
+      // handler itself throw an uncaught _TypeError at every app start.
+      debugPrint(exception is PlatformException
+          ? exception.message
+          : exception.toString());
     }
   }
 
