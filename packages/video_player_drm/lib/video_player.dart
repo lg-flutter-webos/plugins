@@ -549,8 +549,12 @@ class VideoPlayerController extends ValueNotifier<VideoPlayerValue> {
     }
 
     void errorListener(Object obj) {
-      final PlatformException e = obj as PlatformException;
-      value = VideoPlayerValue.erroneous(e.message!);
+      // Not every stream error is a PlatformException; a cast here made the
+      // listener itself throw.
+      final String message = obj is PlatformException
+          ? (obj.message ?? obj.code)
+          : obj.toString();
+      value = VideoPlayerValue.erroneous(message);
       _timer?.cancel();
       if (!initializingCompleter.isCompleted) {
         initializingCompleter.completeError(obj);
@@ -652,7 +656,16 @@ class VideoPlayerController extends ValueNotifier<VideoPlayerValue> {
           if (_isDisposed) {
             return;
           }
-          final Duration? newPosition = await position;
+          final Duration? newPosition;
+          try {
+            newPosition = await position;
+          } on PlatformException {
+            // The platform player is gone (for example removed after a
+            // pipeline error); stop polling instead of throwing an uncaught
+            // "Player not found" every 100 ms until dispose().
+            timer.cancel();
+            return;
+          }
           if (newPosition == null) {
             return;
           }
