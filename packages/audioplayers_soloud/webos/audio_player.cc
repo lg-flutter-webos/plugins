@@ -326,17 +326,16 @@ void AudioPlayer::SetBalance(double balance) {
 }
 
 void AudioPlayer::Seek(int64_t position) {
+  // audioplayers' seek() waits for onSeekComplete, so send it on every path.
   if (uri_.empty()) {
     LogInfo(TAG) << "player_set_play_position: empty url";
-    return;
-  }
-  if (position != getCurrentPosition()) {
+  } else if (position != getCurrentPosition()) {
     seek_position_ = position;
     if (handle_) {
       player_.seek(handle_, position / 1000.);
-      sink_seek_completed();
     }
   }
+  sink_seek_completed();
 }
 
 int64_t AudioPlayer::GetPosition() {
@@ -496,8 +495,11 @@ void AudioPlayer::OnPlayCompleted() {
       break;
 
     case ReleaseMode::kRelease:
+      // Keep the decoded sound, as other audioplayers platforms keep the
+      // source: resume() after completion must play again from the start.
+      // release()/dispose() still free it.
       sink_play_completed();
-      Release();
+      Stop();
       break;
 
     default:
