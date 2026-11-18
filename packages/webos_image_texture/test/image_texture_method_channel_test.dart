@@ -21,6 +21,6 @@ void main() {
   });
 
   test('runtimeType', () {
-    expect(platform.runtimeType, '$ImageTextureMethodChannel');
+    expect(platform.runtimeType, ImageTextureMethodChannel);
   });
 }
